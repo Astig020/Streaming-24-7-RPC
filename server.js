@@ -1,12 +1,14 @@
-const express = require('express');
+const express = require('express')
 const server = express();
- 
-server.all('/', (req, res) => {
-  res.send(`NOW GO TO ANY UPTIME APP and paste this link`)
+
+server.all("/", (req, res) => {
+  res.send('<meta http-equiv="refresh" content="0; URL=https://dcalive2023.onrender.com"/>')
 })
- 
+
 function keepAlive() {
-  server.listen(3000, () => { console.log("Server is Ready!!" + Date.now()) });
+  server.listen(3000, () => {
+    console.log("Server is ready!" + Date.now());
+
+  })
 }
- 
-module.exports = keepAlive;
+module.exports = keepAlive
